@@ -109,8 +109,8 @@
                                 _user = data.results._links.user.href;
                                 _serverFqdn = data.results._links.xframe.href;
                                 transport.injectFrame(_serverFqdn, _container, handleFrameLoad);
-                            } else if (_discoveryLocation.indexOf("https://lyncdiscoverinternal.") !== -1) {
-                                startAutoDiscover(_domain, _container, "https://lyncdiscover.");
+                            } else if (_discoveryLocation.indexOf("http://lyncdiscover.") !== -1) {
+                                startAutoDiscover(_domain, _container, "http://lyncdiscover.");
                             } else {
                                 window.console.log("Failed Autodiscovery on: " + _discoveryLocation);
 
@@ -138,7 +138,7 @@
             /// </remarks>
             obj.prototype.startDiscovery = function(domain, container, callback) {
                 _callback = callback;
-                startAutoDiscover(domain, container, "https://lyncdiscoverinternal.");
+                startAutoDiscover(domain, container, "http://lyncdiscover.");
             }
         };
 
