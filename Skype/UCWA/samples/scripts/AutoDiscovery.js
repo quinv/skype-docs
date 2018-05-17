@@ -87,7 +87,7 @@
             /// </remarks>
             function testDiscovery(data) {
                 if (data.status !== 200) {
-                    if (data.link && data.link.indexOf("http://lyncdiscover.") !== -1) {
+                    if (data.link && data.link.indexOf("http://lyncdiscoverinternal.") !== -1) {
                         startAutoDiscover(_domain, _container, "http://lyncdiscover.");
                     } else {
                         window.console.log("Autodiscovery failed on internal/external location");
